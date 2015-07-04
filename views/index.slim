@@ -4,16 +4,38 @@ html
     title Totz Yuta
 
   body
+    img#coffee[src="images/coffee.jpg"]
+    div#profile
+      p Totz Yuta
+      p CTO at Tren Inc.
+      p
+        | GitHub: 
+        a href="https:/github.com/totzyuta" @totzyuta
+      p
+        | Twitter: 
+        a href="https:/twitter.com/totzyuta" @totzyuta
 
 sass:
-  img
-    width: 1000px
-
   body
-    background-image: url(images/comingsoon.jpg)
-    background-size: 100% auto
-    background-repeat: no-repeat
-    background-position: right
+    margin: -10px
 
-  .right 
-    text-aligh: right
+  img
+    width: 100%
+    margin-top: -250px
+  
+  div 
+    position: absolute
+    top: 45px
+    left: 20px
+    color: #fff
+
+  a
+    color: #fff
+
+  p 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-size: 24px
+    font-style: normal
+    font-variant: normal
+    font-weight: 100
+    line-height: 26.3999996185303px

@@ -18,14 +18,5 @@ class User < ActiveRecord::Base
 end
 
 get '/' do
-  @users = User.all
   slim :index
-end
-
-post '/' do
-  user = User.new
-  user.email = params[:email]
-  user.order = params[:order]
-  user.save
-  redirect "/" 
 end

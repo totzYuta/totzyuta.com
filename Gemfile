@@ -18,6 +18,7 @@ gem "capistrano-passenger"
 
 group :production do
   gem 'pg'
+  gem 'unicorn'
 end
 
 group :development do

@@ -1,15 +1,32 @@
 # coding: utf-8
-require "sinatra/base"
-require 'sinatra/reloader' if development?
+# require "sinatra/base"
+# # require 'sinatra/reloader' if development?
+# 
+# class MyApp < Sinatra::Base
+# 
+#   get '/' do
+#     slim :index
+#   end
+# 
+#   not_found do
+#     '404 not found'
+#   end
+# 
+# end
+require 'bundler/setup'
 
-class MyApp < Sinatra::Base
+require 'slim'
+require 'sass'
+require 'coffee-script'
 
-  get '/' do
-    slim :index
-  end
+require 'active_record'
+require 'sinatra/activerecord'
 
-  not_found do
-    '404 not found'
-  end
+require './models/db'
 
+class User < ActiveRecord::Base
+end
+
+get '/' do
+  slim :index
 end

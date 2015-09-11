@@ -1,17 +1,36 @@
-require 'bundler/setup'
+# coding: utf-8
+require "sinatra/base"
+require 'sinatra/reloader' if development?
 
-require 'slim'
-require 'sass'
-require 'coffee-script'
+class MyApp < Sinatra::Base
 
-require 'active_record'
-require 'sinatra/activerecord'
+  get '/' do
+    # File.read(File.join(settings.public_folder, 'index.html'))
+    slim :index
+  end
 
-require './models/db'
+  not_found do
+    '404 not found'
+  end
 
-class User < ActiveRecord::Base
 end
 
-get '/' do
-  slim :index
-end
+# require 'bundler/setup'
+# 
+# require 'slim'
+# require 'sass'
+# require 'coffee-script'
+# 
+# require 'active_record'
+# require 'sinatra/activerecord'
+# 
+# require './models/db'
+# 
+# class User < ActiveRecord::Base
+# end
+# 
+# get '/' do
+#   slim :index
+# end
+# 
+# 

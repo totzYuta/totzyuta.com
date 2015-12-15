@@ -12,15 +12,14 @@ html
     /img#coffee[src="images/coffee.jpg"]
     div#profile
       p#name Totz Yuta
-      /p CTO at Tren Inc.
       p#about Web/iOS Developer
-      a.icon[href="https://github.com/totzyuta" target="_blank"] 
+      a.icon[href="https://github.com/totzyuta" target="_blank"]
         span.li_lab[aria-hidden="true"]
-      a.icon[href="https://twitter.com/totzyuta" target="_blank"] 
+      a.icon[href="https://twitter.com/totzyuta" target="_blank"]
         span.li_bulb[aria-hidden="true"]
-      a.icon[href="https://www.linkedin.com/in/yutatotz" target="_blank"] 
+      a.icon[href="https://www.linkedin.com/in/yutatotz" target="_blank"]
         span.li_news[aria-hidden="true"]
-      a.icon[href="https://totzyuta.github.io" target="_blank"] 
+      a.icon[href="https://totzyuta.github.io" target="_blank"]
         span.li_pen[aria-hidden="true"]
 
 
@@ -31,14 +30,14 @@ sass:
     background-size: cover
     background-repear: no-repeat
     overflow: hidden
-  
-  div 
+
+  div
     position: absolute
     top: 55px
     left: 55px
     color: #fff
 
-  p 
+  p
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
     font-style: normal
     font-variant: normal
@@ -65,13 +64,11 @@ sass:
 
 
 coffee:
-  # スピード指定付き
-  $('.icon').jrumble 
+  $('.icon').jrumble
     speed: 100
     x: 3
     y: 3
     rotation: 10
-  #ホバーで揺らす設定(上記同様)
   $('.icon').hover (->
     $(this).trigger 'startRumble'
     return
